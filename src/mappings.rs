@@ -85,7 +85,7 @@ impl Kind {
 
             MIRABOX_VID => match pid {
                 N3EN_PID => Some(Kind::N3EN),
-                N3_PID   => Some(Kind::N3)
+                N3_PID   => Some(Kind::N3),
                 _ => None,
             },
 
