@@ -44,16 +44,18 @@ pub const AKP03E_QUERY: DeviceQuery = DeviceQuery::new(65440, 1, AJAZZ_VID, AKP0
 pub const AKP03R_QUERY: DeviceQuery = DeviceQuery::new(65440, 1, AJAZZ_VID, AKP03R_PID);
 pub const AKP03E_REV2_QUERY: DeviceQuery = DeviceQuery::new(65440, 1, AJAZZ_VID, AKP03E_REV2_PID);
 pub const N3_QUERY: DeviceQuery = DeviceQuery::new(65440, 1, N3_VID, N3_PID);
+pub const N3_MIRABOX_QUERY: DeviceQuery = DeviceQuery::new(65440, 1, MIRABOX_VID, N3_PID);
 pub const N3EN_QUERY: DeviceQuery = DeviceQuery::new(65440, 1, MIRABOX_VID, N3EN_PID);
 pub const SOOMFON_SE_QUERY: DeviceQuery = DeviceQuery::new(65440, 1, SOOMFON_VID, SOOMFON_SE_PID);
 pub const MSD_TWO_QUERY: DeviceQuery = DeviceQuery::new(65440, 1, MARS_GAMING_VID, MSD_TWO_PID);
 
-pub const QUERIES: [DeviceQuery; 8] = [
+pub const QUERIES: [DeviceQuery; 9] = [
     AKP03_QUERY,
     AKP03E_QUERY,
     AKP03R_QUERY,
     AKP03E_REV2_QUERY,
     N3_QUERY,
+    N3_MIRABOX_QUERY,
     N3EN_QUERY,
     SOOMFON_SE_QUERY,
     MSD_TWO_QUERY,
@@ -83,6 +85,7 @@ impl Kind {
 
             MIRABOX_VID => match pid {
                 N3EN_PID => Some(Kind::N3EN),
+                N3_PID   => Some(Kind::N3)
                 _ => None,
             },
 
